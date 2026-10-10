@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="text" id="texto" placeholder="Nuevo elemento">
+  <button id="agregar">Agregar</button>
+  <ul id="lista"></ul>
+
+  <script>
+    const input = document.getElementById("texto");
+    const btnAgregar = document.getElementById("agregar");
+    const lista = document.getElementById("lista");
+
+    btnAgregar.addEventListener("click", () => {
+      if (input.value === "") return;
+
+      const li = document.createElement("li");
+      li.textContent = input.value + " ";
+
+      const btnEliminar = document.createElement("button");
+      btnEliminar.textContent = "X";
+      
+      btnEliminar.addEventListener("click", () => {
+        li.remove();
+      });
+
+      li.appendChild(btnEliminar);
+      lista.appendChild(li);
+      input.value = "";
+    });
+  </script>
+</body>
+</html>

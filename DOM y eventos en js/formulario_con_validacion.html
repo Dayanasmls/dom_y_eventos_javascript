@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form id="formulario">
+    <input type="text" id="nombre" placeholder="Nombre"><br>
+    <span id="errorNombre" style="color:red"></span><br>
+
+    <input type="email" id="correo" placeholder="Correo"><br>
+    <span id="errorCorreo" style="color:red"></span><br>
+
+    <input type="password" id="pass" placeholder="Contraseña"><br>
+    <span id="errorPass" style="color:red"></span><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("formulario");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); // Detiene el envío
+
+      const nombre = document.getElementById("nombre").value;
+      const correo = document.getElementById("correo").value;
+      const pass = document.getElementById("pass").value;
+
+      let valido = true;
+
+      // Limpiar errores
+      document.getElementById("errorNombre").textContent = "";
+      document.getElementById("errorCorreo").textContent = "";
+      document.getElementById("errorPass").textContent = "";
+
+      if (nombre.trim() === "") {
+        document.getElementById("errorNombre").textContent = "El nombre es obligatorio";
+        valido = false;
+      }
+      if (correo.trim() === "") {
+        document.getElementById("errorCorreo").textContent = "El correo es obligatorio";
+        valido = false;
+      }
+      if (pass.trim() === "" || pass.length < 6) {
+        document.getElementById("errorPass").textContent = "Contraseña mínimo 6 caracteres";
+        valido = false;
+      }
+
+      if (valido) {
+        alert("Formulario enviado correctamente");
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

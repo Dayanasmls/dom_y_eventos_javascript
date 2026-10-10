@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3771ac;
+    color: #243b53;
+    margin: 0;
+    padding: 25px;
+}
+
+.contenedor {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 8px 0 12px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#mensaje {
+    min-height: 20px;
+}

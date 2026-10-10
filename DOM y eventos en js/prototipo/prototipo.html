@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de actividades educativas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="prototipo.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Plataforma educativa</h1>
+
+        <p>Consulta las actividades disponibles para tu formación.</p>
+
+        <label for="busqueda">Buscar actividad:</label>
+
+        <input
+            type="text"
+            id="busqueda"
+            placeholder="Escribe el nombre de una actividad"
+        >
+
+        <button id="botonConsultar" type="button">
+            Consultar actividades
+        </button>
+
+        <p id="mensaje" aria-live="polite"></p>
+
+        <h2>Actividades disponibles</h2>
+
+        <ul id="listaActividades">
+            <li>Actividad de HTML</li>
+            <li>Ejercicio de JavaScript</li>
+            <li>Investigación de bases de datos</li>
+            <li>Proyecto de análisis de software</li>
+        </ul>
+    </main>
+</body>
+</html>

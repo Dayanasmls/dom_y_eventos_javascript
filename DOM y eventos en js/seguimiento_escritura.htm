@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="text" id="campo" placeholder="Escribe algo...">
+  <p id="resultado"></p>
+
+  <script>
+    const campo = document.getElementById("campo");
+    const resultado = document.getElementById("resultado");
+
+    campo.addEventListener("input", () => {
+      resultado.textContent = campo.value;
+    });
+  </script>
+</body>
+</html>

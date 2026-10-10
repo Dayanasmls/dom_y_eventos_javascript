@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #seccion { padding: 20px; background: white; border: 1px solid black; }
+    .fondo-activo { background: #222 !important; color: white; }
+  </style>
+</head>
+<body>
+  <div id="seccion">Soy una sección</div>
+  <button id="btnCambiar">Cambiar color</button>
+  <button id="btnRestaurar">Restaurar</button>
+
+  <script>
+    const seccion = document.getElementById("seccion");
+    const btnCambiar = document.getElementById("btnCambiar");
+    const btnRestaurar = document.getElementById("btnRestaurar");
+
+    btnCambiar.addEventListener("click", () => {
+      seccion.classList.add("fondo-activo");
+    });
+
+    btnRestaurar.addEventListener("click", () => {
+      seccion.classList.remove("fondo-activo");
+    });
+  </script>
+</body>
+</html>
